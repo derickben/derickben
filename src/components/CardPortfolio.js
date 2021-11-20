@@ -1,11 +1,11 @@
 import "aos/dist/aos.css";
 import AOS from "aos";
-import { useEffect} from "react";
+import { useEffect } from "react";
 
 const CardPortfolio = ({ details }) => {
-  const { bgImg, fig, text, link, color1, color2, altText } = details;
-  
-    useEffect(() => {
+  const { bgImg, text, link, altText } = details;
+
+  useEffect(() => {
     AOS.init({
       duration: 2000,
     });
@@ -14,12 +14,11 @@ const CardPortfolio = ({ details }) => {
   return (
     <div
       className="cardPortfolio"
-	  data-aos={"fade-right"}
+      data-aos={"fade-right"}
       style={{
-        backgroundImage: `linear-gradient(${color1}, ${color2}),url(${bgImg})`,
+        backgroundImage: `url(${bgImg})`,
       }}
     >
-      <img src={fig} alt="" className="cardPortfolio__figure" />
       <div className="cardPortfolio__caption">
         {" "}
         <p>{text}</p>

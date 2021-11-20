@@ -7,7 +7,7 @@
   // background-color: hsla(23, 88, 68, 0.41);
   background-color: hsla(24, 100%, 72%, 0.53);
 
-  color: hsla(23, 88, 25, 1);
+  color: hsla(23, 88%, 25%, 1);
   border-radius: 2rem;
 
   &__title {
@@ -16,7 +16,7 @@
     border-radius: 2px;
     padding: 1rem;
     // background-color: hsl(23, 51, 44);
-    background-color: hsla(23, 88, 68, 0.41);
+    background-color: hsla(23, 88%, 68%, 0.41);
     font-size: 1.4rem;
     font-weight: 700;
   }
@@ -42,7 +42,7 @@
           color: white;
           border-radius: 40%;
           border-radius: 15%;
-          background-color: hsla(23, 88, 25, 0.75);
+          background-color: hsla(23, 88%, 25%, 0.75);
           // border: 3px solid hsla(23, 88, 25, 1);
 
           @media only screen and (max-width: 1109px) {
@@ -84,12 +84,12 @@
       }
 
       .css-187mznn-MuiSlider-root.Mui-disabled {
-        color: hsl(45, 96, 48);
+        color: hsl(45, 96%, 48%);
         // color: hsl(181, 64, 40);
       }
 
       .css-14pt78w-MuiSlider-rail {
-        background-color: hsl(45, 96, 60);
+        background-color: hsl(45, 96%, 60%);
       }
     }
   }

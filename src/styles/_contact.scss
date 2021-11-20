@@ -7,7 +7,7 @@
   grid-gap: 5rem;
   grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
   align-content: start;
-  color: hsl(23, 88, 25);
+  color: hsl(23, 88%, 25%);
 
   &__first {
     display: grid;
@@ -25,58 +25,58 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 5rem;
-    background-color: hsl(23, 88, 98);
+    background-color: hsl(23, 88%, 98%);
     border-radius: 5rem;
     padding: 5rem;
 
     .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root,
     .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
       font-size: 1.3rem;
-      color: hsl(23, 88, 25);
+      color: hsl(23, 88%, 25%);
     }
 
     .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
-      color: hsl(23, 88, 25);
+      color: hsl(23, 88%, 25%);
       line-height: 1.2338em;
     }
 
     .css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused,
     .css-1kty9di-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
-      color: hsl(23, 88, 25);
+      color: hsl(23, 88%, 25%);
       font-size: 1.3rem;
     }
 
     .css-1480iag-MuiInputBase-root-MuiInput-root::before,
     .css-ghsjzk-MuiInputBase-root-MuiInput-root::before {
-      border-bottom: 1px solid hsl(23, 88, 25);
+      border-bottom: 1px solid hsl(23, 88%, 25%);
     }
 
     .css-1480iag-MuiInputBase-root-MuiInput-root::after,
     .css-ghsjzk-MuiInputBase-root-MuiInput-root::after {
-      border-bottom: 2px solid hsl(45, 96, 48);
+      border-bottom: 2px solid hsl(45, 96%, 48%);
     }
 
     .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
-      border-color: hsl(23, 88, 25);
+      border-color: hsl(23, 88%, 25%);
     }
 
     .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
       .MuiOutlinedInput-notchedOutline {
-      border-color: hsl(45, 96, 48);
+      border-color: hsl(45, 96%, 48%);
     }
 
     .css-sghohy-MuiButtonBase-root-MuiButton-root {
       padding: 1rem 2rem;
       font-size: 1.4rem;
-      color: hsl(23, 88, 25);
+      color: hsl(23, 88%, 25%);
       font-weight: 700;
       border-radius: 1rem;
-      background-color: hsl(23, 88, 75);
+      background-color: hsl(23, 88%, 75%);
       box-shadow: none;
 
       &:hover {
-        background-color: hsl(23, 88, 25);
-        color: hsl(23, 88, 80);
+        background-color: hsl(23, 88%, 25%);
+        color: hsl(23, 88%, 80%);
       }
     }
 
@@ -113,11 +113,11 @@
 
     a {
       text-decoration: none;
-      color: hsl(45, 96, 58);
+      color: hsl(45, 96%, 58%);
       transition: 0.2s;
 
       &:hover {
-        color: hsl(23, 88, 25);
+        color: hsl(23, 88%, 25%);
       }
     }
   }
