@@ -1,0 +1,47 @@
+/*
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 98
+
+*/
+
+h1 {
+  // 44 / 52 / 62
+  font-size: 6.2rem;
+  line-height: 1.2;
+  letter-spacing: -1px;
+}
+
+h2 {
+  // 24 / 30 / 36
+  font-size: 3.6rem;
+  letter-spacing: -0.5px;
+}
+
+h3 {
+  //18 / 20 / 24 / 30
+  font-size: 2.4rem;
+}
+
+p {
+  // 18 / 20 / 24
+  font-size: 1.8rem;
+  line-height: 1.7;
+}
+
+.line {
+  font-size: 1.4rem;
+  line-height: 1.7;
+  color: #f2b705;
+}
+
+.line::before {
+  content: "";
+  width: 4rem;
+  height: 1px;
+  background-color: #f2b705;
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 1rem;
+}

@@ -1,0 +1,68 @@
+.navbar {
+  grid-column: full-start / full-end;
+
+  .MuiAppBar-root {
+    // background-color: hsl(24, 43%, 76%);
+    background-image: linear-gradient(
+      45deg,
+      hsla(24, 43%, 46%, 1) 0%,
+      hsla(24, 43%, 46%, 0.93) 50%,
+      hsla(24, 100%, 72%, 0.53) 100%
+    );
+    border: none;
+
+    // background-color: transparent;
+  }
+
+  .MuiTypography-root {
+    transition: 3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    &:hover {
+      color: white;
+    }
+  }
+
+  &__scrolled {
+    background-image: linear-gradient(
+      45deg,
+      hsla(24, 43%, 46%, 1) 0%,
+      hsla(24, 43%, 46%, 1) 50%,
+      hsla(24, 43%, 46%, 1) 100%
+    ) !important;
+
+    .navbar__active {
+      background-color: hsl(24, 43%, 66%);
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    // grid-row: 5/6;
+  }
+
+  .MuiAppBar-root {
+    @media only screen and (max-width: $bp-medium) {
+      // position: sticky;
+    }
+  }
+
+  &__active {
+    padding: 1rem;
+    background-color: hsl(24, 43%, 40%);
+  }
+
+  .show {
+    display: none;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .hide {
+      display: none;
+    }
+    .show {
+      display: block;
+    }
+
+    .space {
+      justify-content: space-between;
+    }
+  }
+}

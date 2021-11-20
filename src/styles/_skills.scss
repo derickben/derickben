@@ -1,0 +1,40 @@
+.skills {
+  grid-column: center-start / center-end;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 5rem;
+
+  background-color: hsla(24, 100%, 72%, 0.23);
+
+  h1 {
+    margin-bottom: 2rem;
+    color: hsla(23, 88, 25, 1);
+  }
+
+  &__grid {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    grid-gap: 5rem;
+
+    @media only screen and (max-width: 500px) {
+      padding: 0;
+    }
+    @media only screen and (max-width: 450px) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    }
+    // @media only screen and (max-width: 330px) {
+    //   padding: 0;
+    // }
+  }
+
+  @media only screen and (max-width: 500px) {
+    grid-column: full-start / full-end;
+    margin: 0 2rem 5rem 2rem;
+    padding: 5rem;
+  }
+
+  @media only screen and (max-width: 330px) {
+    padding: 2rem;
+  }
+}

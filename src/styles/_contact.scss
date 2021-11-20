@@ -1,0 +1,145 @@
+.contact {
+  grid-column: full-start / full-end;
+  margin: 5rem 0;
+  padding: 5rem;
+  padding-top: 0;
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  align-content: start;
+  color: hsl(23, 88, 25);
+
+  &__first {
+    display: grid;
+    grid-gap: 5rem;
+    padding: 5rem;
+
+    p {
+      @media only screen and (max-width: 335px) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__second {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 5rem;
+    background-color: hsl(23, 88, 98);
+    border-radius: 5rem;
+    padding: 5rem;
+
+    .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root,
+    .css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+      font-size: 1.3rem;
+      color: hsl(23, 88, 25);
+    }
+
+    .css-aqpgxn-MuiFormLabel-root-MuiInputLabel-root {
+      color: hsl(23, 88, 25);
+      line-height: 1.2338em;
+    }
+
+    .css-1c2i806-MuiFormLabel-root-MuiInputLabel-root.Mui-focused,
+    .css-1kty9di-MuiFormLabel-root-MuiInputLabel-root.Mui-focused {
+      color: hsl(23, 88, 25);
+      font-size: 1.3rem;
+    }
+
+    .css-1480iag-MuiInputBase-root-MuiInput-root::before,
+    .css-ghsjzk-MuiInputBase-root-MuiInput-root::before {
+      border-bottom: 1px solid hsl(23, 88, 25);
+    }
+
+    .css-1480iag-MuiInputBase-root-MuiInput-root::after,
+    .css-ghsjzk-MuiInputBase-root-MuiInput-root::after {
+      border-bottom: 2px solid hsl(45, 96, 48);
+    }
+
+    .css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+      border-color: hsl(23, 88, 25);
+    }
+
+    .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root.Mui-focused
+      .MuiOutlinedInput-notchedOutline {
+      border-color: hsl(45, 96, 48);
+    }
+
+    .css-sghohy-MuiButtonBase-root-MuiButton-root {
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      color: hsl(23, 88, 25);
+      font-weight: 700;
+      border-radius: 1rem;
+      background-color: hsl(23, 88, 75);
+      box-shadow: none;
+
+      &:hover {
+        background-color: hsl(23, 88, 25);
+        color: hsl(23, 88, 80);
+      }
+    }
+
+    &--name,
+    &--message {
+      grid-column: 1/-1;
+    }
+
+    &--button {
+      align-self: start;
+      padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-largest) {
+      grid-row-gap: 5rem;
+    }
+  }
+
+  span {
+    margin-right: 2rem;
+    justify-self: start;
+    position: relative;
+    align-self: center;
+
+    @media only screen and (max-width: 335px) {
+      margin-right: 1rem;
+    }
+  }
+
+  &__socials {
+    & > a:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    a {
+      text-decoration: none;
+      color: hsl(45, 96, 58);
+      transition: 0.2s;
+
+      &:hover {
+        color: hsl(23, 88, 25);
+      }
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+    padding: 3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(53rem, 1fr));
+  }
+  @media only screen and (max-width: 435px) {
+    padding: 2rem;
+    // grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  }
+  @media only screen and (max-width: 410px) {
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+  }
+  @media only screen and (max-width: 387px) {
+    grid-template-columns: repeat(auto-fit, minmax(47rem, 50rem));
+  }
+  @media only screen and (max-width: 360px) {
+    grid-template-columns: repeat(auto-fit, minmax(43rem, 50rem));
+  }
+  @media only screen and (max-width: 335px) {
+    grid-template-columns: repeat(auto-fit, minmax(37rem, 50rem));
+  }
+}

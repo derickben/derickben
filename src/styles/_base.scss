@@ -1,0 +1,53 @@
+/*
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52
+/ 62 / 74 / 86 98
+
+*/
+// FONT VARIABLES
+$font-primary: "Inter", sans-serif;
+
+//RESPONSIVE BREAKPOINTS
+$bp-largest: 71.875em; // 1150px
+$bp-medium: 50em; // 800px
+$bp-small: 31.25em; // 500px
+$bp-phone: 25em; // 400px
+$bp-min: 22.1875em; // 355px
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-medium) {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: $font-primary;
+}
+
+.container {
+  display: grid;
+
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [center-end] minmax(6rem, 1fr) [full-end];
+
+  grid-template-rows: 6rem calc(80vh + 6rem) repeat(4, min-content);
+
+  @media only screen and (max-width: $bp-medium) {
+    // grid-template-rows: 80vh repeat(4, min-content) 3rem;
+  }
+}

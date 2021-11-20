@@ -1,0 +1,26 @@
+.portfolio {
+  grid-column: full-start / full-end;
+  padding: 8rem;
+  color: hsl(23, 88, 25);
+
+  background-color: hsl(23, 88, 97);
+
+  span {
+    position: relative;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50rem, 1fr));
+    grid-gap: 5rem;
+    margin-top: 3rem;
+
+    @media only screen and (max-width: 530px) {
+      grid-template-columns: repeat(auto-fit, minmax(30rem, 53rem));
+    }
+  }
+
+  @media only screen and (max-width: 530px) {
+    padding: 5rem;
+  }
+}

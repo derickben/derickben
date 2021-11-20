@@ -1,0 +1,96 @@
+.cardSkill {
+  padding: 3rem;
+
+  display: grid;
+  grid-gap: 1rem;
+
+  // background-color: hsla(23, 88, 68, 0.41);
+  background-color: hsla(24, 100%, 72%, 0.53);
+
+  color: hsla(23, 88, 25, 1);
+  border-radius: 2rem;
+
+  &__title {
+    justify-self: start;
+    align-self: center;
+    border-radius: 2px;
+    padding: 1rem;
+    // background-color: hsl(23, 51, 44);
+    background-color: hsla(23, 88, 68, 0.41);
+    font-size: 1.4rem;
+    font-weight: 700;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 2rem 1rem;
+    border-bottom: 2px solid;
+    &--item {
+      div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        p {
+          font-size: 2rem;
+        }
+
+        img {
+          width: 25%;
+          height: 10rem;
+          padding: 2rem;
+          color: white;
+          border-radius: 40%;
+          border-radius: 15%;
+          background-color: hsla(23, 88, 25, 0.75);
+          // border: 3px solid hsla(23, 88, 25, 1);
+
+          @media only screen and (max-width: 1109px) {
+            height: 15rem;
+            width: 25%;
+          }
+          @media only screen and (max-width: $bp-medium) {
+            width: 20%;
+          }
+          @media only screen and (max-width: 700px) {
+            width: 25%;
+          }
+          @media only screen and (max-width: 650px) {
+            width: 30%;
+          }
+          @media only screen and (max-width: 550px) {
+            width: 35%;
+          }
+          @media only screen and (max-width: 450px) {
+            width: 40%;
+          }
+          @media only screen and (max-width: 400px) {
+            height: 10rem;
+          }
+        }
+      }
+      .right {
+        margin-right: 4rem;
+      }
+      // .MuiBox-root {
+      //   width: 100%;
+      // }
+    }
+
+    &--item {
+      p {
+        font-weight: 500;
+        font-size: 1.4rem;
+      }
+
+      .css-187mznn-MuiSlider-root.Mui-disabled {
+        color: hsl(45, 96, 48);
+        // color: hsl(181, 64, 40);
+      }
+
+      .css-14pt78w-MuiSlider-rail {
+        background-color: hsl(45, 96, 60);
+      }
+    }
+  }
+}
