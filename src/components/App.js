@@ -1,5 +1,6 @@
 import "../App.scss";
 import { useEffect } from "react";
+import Radium, { StyleRoot } from "radium";
 import { NavProvider } from "../context/NavContext";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -11,20 +12,22 @@ import Skills from "./Skills";
 function App() {
   useEffect(() => {});
   return (
-    <div className="App">
-      <div className="container">
-        <NavProvider>
-          <Navbar />
-          <Home />
-          <Skills />
-          <Portfolio />
+    <StyleRoot>
+      <div className="App">
+        <div className="container">
+          <NavProvider>
+            <Navbar />
+            <Home />
+            <Skills />
+            <Portfolio />
 
-          <Contact />
-          <Footer />
-        </NavProvider>
+            <Contact />
+            <Footer />
+          </NavProvider>
+        </div>
       </div>
-    </div>
+    </StyleRoot>
   );
 }
 
-export default App;
+export default Radium(App);

@@ -1,39 +1,50 @@
-//import "aos/dist/aos.css";
-//import AOS from "aos";
 import { useEffect, useRef, useContext } from "react";
 import { NavContext } from "../context/NavContext";
 import CardPortfolio from "./CardPortfolio";
 
 import portfolio1 from "../img/portfolio1.png";
-import portfolio2 from "../img/portfolio2.png";
-import portfolio3 from "../img/portfolio3.png";
+import portfolio3 from "../img/portfolio2.png";
+import portfolio2 from "../img/portfolio3.png";
 import portfolio4 from "../img/portfolio4.png";
+
+import portfolioMini1 from "../img/portfolioMini1.png";
+import portfolioMini3 from "../img/porfolioMini2.png";
+import portfolioMini2 from "../img/portfolioMini3.png";
+import portfolioMini4 from "../img/portfolioMini4.png";
 
 const card1 = {
   bgImg: portfolio1,
+  bgImgMini: portfolioMini1,
   text: "Two page responsive website built with React and Sass. Utilized CSS Grid and Flexbox",
-  link: "https://derickben.github.io/empower/#/",
-  altText: "Empower project",
+  link: "https://arvin-instruments.herokuapp.com/",
+  tools: ["React", "Radium", "Sass", "Animation", "NodeJS", "MongoDB", "JWT"],
+  altText: "OEMA project",
 };
 
 const card2 = {
   bgImg: portfolio2,
-  text: "Single page website built with flexbox and float.",
-  link: "https://derickben.github.io/portfolio-project/",
-  altText: "Portfolio project",
+  bgImgMini: portfolioMini2,
+  text: "Two page responsive website built with React and Sass. Utilized CSS Grid and Flexbox",
+  link: "https://derickben.github.io/empower/#/",
+  tools: ["React", "Sass", "React-router"],
+  altText: "Empower project",
 };
 
 const card3 = {
   bgImg: portfolio3,
-  text: "Landing page developed for future homes built with Sass and grid",
-  link: "https://derickben.github.io/nexter-project/",
-  altText: "Nexter project",
+  bgImgMini: portfolioMini3,
+  text: "Single page website built with flexbox and float.",
+  link: "https://derickben.github.io/portfolio-project/",
+  tools: ["HTML5", "Sass"],
+  altText: "Single page project",
 };
 
 const card4 = {
   bgImg: portfolio4,
+  bgImgMini: portfolioMini4,
   text: "Landing page developed for future homes built with Sass and grid",
   link: "https://derickben.github.io/nexter-project/",
+  tools: ["HTML5", "Sass"],
   altText: "Nexter project",
 };
 
@@ -49,11 +60,6 @@ const Portfolio = () => {
     }
   };
   useEffect(() => {
-    /*
-    AOS.init({
-      duration: 2000,
-    });
-	*/
     setScrollNav();
   });
   return (
