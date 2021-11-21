@@ -58,6 +58,8 @@ const Portfolio = () => {
 
     if (offset > portfolioTop && offset <= portfolioHeight + portfolioTop) {
       setActive("portfolio");
+    } else if (offset > portfolioHeight + portfolioTop) {
+      setActive("contact");
     }
   };
   useLayoutEffect(() => {

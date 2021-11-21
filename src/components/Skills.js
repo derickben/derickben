@@ -43,11 +43,7 @@ const Skills = () => {
   const setScrollNav = () => {
     let skillsTop = skillRef.current.offsetTop;
     let skillsHeight = skillRef.current.clientHeight;
-    console.log({
-      skillsTop,
-      skillsHeight,
-      offset,
-    });
+
     if (offset > skillsTop && offset <= skillsHeight + skillsTop) {
       setActive("skills");
     } else if (offset > skillsHeight + skillsTop) {

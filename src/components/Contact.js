@@ -9,16 +9,21 @@ const Contact = () => {
   const contactRef = useRef();
 
   const setScrollNav = () => {
-    let sectionTop = contactRef.current.offsetTop;
-    let sectionHeight = contactRef.current.clientHeight;
-    if (offset > sectionTop && offset <= sectionHeight + sectionTop) {
+    let contactTop = contactRef.current.offsetTop;
+    let contactHeight = contactRef.current.clientHeight;
+    console.log({
+      contactTop,
+      contactHeight,
+      offset,
+    });
+    if (offset > contactTop && offset <= contactHeight + contactTop) {
       setActive("contact");
     }
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setScrollNav();
-  });
+  }, [offset]);
   return (
     <div className="contact" id="contact" ref={contactRef}>
       <div className="contact__first">
