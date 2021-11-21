@@ -1,6 +1,4 @@
-import "aos/dist/aos.css";
-import AOS from "aos";
-import { useEffect, useRef, useContext } from "react";
+import { useEffect, useRef, useContext, useLayoutEffect } from "react";
 import { NavContext } from "../context/NavContext";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
@@ -18,44 +16,35 @@ const Contact = () => {
     }
   };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-      offset: 200,
-    });
+  useLayoutEffect(() => {
     setScrollNav();
   });
   return (
-    <div
-      className="contact"
-      id="contact"
-      data-aos={"fade-down-left"}
-      ref={contactRef}
-    >
+    <div className="contact" id="contact" ref={contactRef}>
       <div className="contact__first">
         <span className="line">Contact</span>
         <h1>Let's discuss your project</h1>
         <p>
           <span className="contact__span">
-            <i class="fas fa-phone-slash "></i>
+            <i className="fas fa-phone-slash "></i>
           </span>{" "}
           +2348134209999
         </p>
         <p>
           <span className="contact__span">
-            <i class="fas fa-envelope "></i>
+            <i className="fas fa-envelope "></i>
           </span>{" "}
           benedictuyioghosa@gmail.com
         </p>
         <p className="contact__socials">
           <a href="">
-            <i class="fab fa-facebook fa-2x"></i>
+            <i className="fab fa-facebook fa-2x"></i>
           </a>
           <a href="">
-            <i class="fab fa-instagram fa-2x"></i>
+            <i className="fab fa-instagram fa-2x"></i>
           </a>
           <a href="">
-            <i class="fab fa-twitter fa-2x"></i>
+            <i className="fab fa-twitter fa-2x"></i>
           </a>
         </p>
       </div>

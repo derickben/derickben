@@ -1,4 +1,10 @@
-import { useState, useEffect, useRef, useContext } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  useContext,
+  useLayoutEffect,
+} from "react";
 import { NavContext } from "../context/NavContext";
 import useTypewriter from "react-typewriter-hook";
 import giraffeImg from "../img/giraffeeBac.jpg";
@@ -12,12 +18,15 @@ let index = 0;
 const imgArr = [bac1, bac2, bac4, giraffeImg];
 let imgIndex = 0;
 
+let homeTop;
+let homeHeight;
+
 const Home = () => {
   const [occupation, setOccupation] = useState("veloper");
   //const [bgImg, setBgImg] = useState(giraffeImg);
   const [bgImg, setBgImg] = useState(() => {
-	  const initialState = giraffeImg;
-	  return initialState
+    const initialState = giraffeImg;
+    return initialState;
   });
   const intervalRef = useRef({});
   const { offset, setActive } = useContext(NavContext);
@@ -25,10 +34,13 @@ const Home = () => {
   const name = useTypewriter(occupation);
 
   const setScrollNav = () => {
-    let skillsTop = homeRef.current.offsetTop;
-    let skillsHeight = homeRef.current.clientHeight;
-    if (offset > skillsTop && offset <= skillsHeight + skillsTop) {
+    homeTop = homeRef.current.offsetTop;
+    homeHeight = homeRef.current.clientHeight;
+
+    if (offset > homeTop && offset <= homeHeight) {
       setActive("home");
+    } else if (offset > homeHeight) {
+      setActive("skills");
     }
   };
 
@@ -51,9 +63,9 @@ const Home = () => {
     };
   }, []);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setScrollNav();
-  });
+  }, [offset]);
 
   useEffect(() => {
     setInterval(() => {

@@ -34,7 +34,7 @@ const Navbar = () => {
           >
             <span className="hide">Home</span>
             <span className="show">
-              <i class="fas fa-home fa-2x"></i>
+              <i className="fas fa-home fa-2x"></i>
             </span>
           </Link>
           <Link
@@ -47,7 +47,7 @@ const Navbar = () => {
           >
             <span className="hide">Skills</span>
             <span className="show">
-              <i class="fas fa-cog fa-2x"></i>
+              <i className="fas fa-cog fa-2x"></i>
             </span>
           </Link>
 
@@ -61,7 +61,7 @@ const Navbar = () => {
           >
             <span className="hide">Portfolio</span>
             <span className="show">
-              <i class="fas fa-th-large fa-2x"></i>
+              <i className="fas fa-th-large fa-2x"></i>
             </span>
           </Link>
           <Link
@@ -74,7 +74,7 @@ const Navbar = () => {
           >
             <span className="hide">Contact</span>
             <span className="show">
-              <i class="fas fa-phone-slash fa-2x"></i>
+              <i className="fas fa-phone-slash fa-2x"></i>
             </span>
           </Link>
         </Toolbar>

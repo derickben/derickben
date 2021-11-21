@@ -1,7 +1,4 @@
-import "aos/dist/aos.css";
-import AOS from "aos";
 import Radium from "radium";
-import { useEffect } from "react";
 
 const CardPortfolio = ({ details }) => {
   const { bgImg, text, link, altText, tools, bgImgMini } = details;
@@ -15,18 +12,8 @@ const CardPortfolio = ({ details }) => {
     },
   };
 
-  // useEffect(() => {
-  //   AOS.init({
-  //     duration: 2000,
-  //   });
-  // });
-
   return (
-    <div
-      className="cardPortfolio"
-      // data-aos={"fade-right"}
-      style={styles.main}
-    >
+    <div className="cardPortfolio" style={styles.main}>
       <div className="cardPortfolio__caption">
         <p className="desc">{text}</p>
         <ul className="tools">
@@ -36,7 +23,7 @@ const CardPortfolio = ({ details }) => {
             </li>
           ))}
         </ul>
-        <a href={link} alt={altText} target="__blank">
+        <a href={link} alt={altText} target="__blank" rel="noreferrer">
           Visit website
         </a>
       </div>

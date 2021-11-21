@@ -1,7 +1,5 @@
-import "aos/dist/aos.css";
-import AOS from "aos";
 import { NavContext } from "../context/NavContext";
-import { useEffect, useContext, useRef } from "react";
+import { useEffect, useContext, useRef, useLayoutEffect } from "react";
 import sassIcon from "../img/sass-1.svg";
 import reactIcon from "../img/react-2.svg";
 import reduxIcon from "../img/redux.svg";
@@ -45,22 +43,24 @@ const Skills = () => {
   const setScrollNav = () => {
     let skillsTop = skillRef.current.offsetTop;
     let skillsHeight = skillRef.current.clientHeight;
+    console.log({
+      skillsTop,
+      skillsHeight,
+      offset,
+    });
     if (offset > skillsTop && offset <= skillsHeight + skillsTop) {
       setActive("skills");
+    } else if (offset > skillsHeight + skillsTop) {
+      setActive("portfolio");
     }
   };
 
-  useEffect(() => {
-    AOS.init({
-      duration: 2000,
-    });
-    ///
-
+  useLayoutEffect(() => {
     setScrollNav();
-  });
+  }, [offset]);
 
   return (
-    <div className="skills" id="skills" ref={skillRef} data-aos={"fade-left"}>
+    <div className="skills" id="skills" ref={skillRef}>
       <h1>My Skills</h1>
       <div className="skills__grid">
         <CardSkill skillSet={frontEnd} />

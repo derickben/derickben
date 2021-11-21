@@ -5,7 +5,7 @@ const CardSkill = ({ skillSet }) => {
       <p className="cardSkill__title">{title}</p>
 
       {skillList.map((item, idx) => (
-        <ul className="cardSkill__list">
+        <ul className="cardSkill__list" key={idx}>
           <li className="cardSkill__list--item">
             <div>
               <img src={item.icon} alt="skill logo" />

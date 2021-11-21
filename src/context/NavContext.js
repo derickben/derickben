@@ -4,7 +4,7 @@ export const NavContext = createContext();
 
 export const NavProvider = (props) => {
   const [offset, setOffset] = useState(0);
-  const [active, setActive] = useState("home");
+  const [active, setActive] = useState("");
 
   useEffect(() => {
     window.onscroll = () => {
