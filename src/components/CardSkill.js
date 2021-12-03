@@ -1,5 +1,6 @@
 const CardSkill = ({ skillSet }) => {
   const { title, skillList } = skillSet;
+
   return (
     <div className="cardSkill">
       <p className="cardSkill__title">{title}</p>

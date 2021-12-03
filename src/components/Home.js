@@ -4,6 +4,7 @@ import {
   useRef,
   useContext,
   useLayoutEffect,
+  useCallback,
 } from "react";
 import { NavContext } from "../context/NavContext";
 import useTypewriter from "react-typewriter-hook";
@@ -33,7 +34,7 @@ const Home = () => {
   const homeRef = useRef();
   const name = useTypewriter(occupation);
 
-  const setScrollNav = () => {
+  const setScrollNav = useCallback(() => {
     homeTop = homeRef.current.offsetTop;
     homeHeight = homeRef.current.clientHeight;
 
@@ -42,7 +43,7 @@ const Home = () => {
     } else if (offset > homeHeight) {
       setActive("skills");
     }
-  };
+  }, [offset, setActive]);
 
   const changeImage = () => {
     if (imgIndex >= imgArr.length) {
@@ -65,7 +66,7 @@ const Home = () => {
 
   useLayoutEffect(() => {
     setScrollNav();
-  }, [offset]);
+  }, [setScrollNav]);
 
   useEffect(() => {
     setInterval(() => {

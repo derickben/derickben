@@ -1,4 +1,4 @@
-import { useEffect, useRef, useContext, useLayoutEffect } from "react";
+import { useCallback, useRef, useContext, useLayoutEffect } from "react";
 import { NavContext } from "../context/NavContext";
 import CardPortfolio from "./CardPortfolio";
 
@@ -52,7 +52,7 @@ const Portfolio = () => {
   const { offset, setActive } = useContext(NavContext);
   const portfolioRef = useRef();
 
-  const setScrollNav = () => {
+  const setScrollNav = useCallback(() => {
     let portfolioTop = portfolioRef.current.offsetTop;
     let portfolioHeight = portfolioRef.current.clientHeight;
 
@@ -61,10 +61,10 @@ const Portfolio = () => {
     } else if (offset > portfolioHeight + portfolioTop) {
       setActive("contact");
     }
-  };
+  }, [offset, setActive]);
   useLayoutEffect(() => {
     setScrollNav();
-  });
+  }, [setScrollNav]);
   return (
     <section className="portfolio" id="portfolio" ref={portfolioRef}>
       <span className="line">Portfolio</span>

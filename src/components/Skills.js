@@ -1,5 +1,5 @@
 import { NavContext } from "../context/NavContext";
-import { useEffect, useContext, useRef, useLayoutEffect } from "react";
+import { useCallback, useContext, useRef, useLayoutEffect } from "react";
 import sassIcon from "../img/sass-1.svg";
 import reactIcon from "../img/react-2.svg";
 import reduxIcon from "../img/redux.svg";
@@ -40,20 +40,24 @@ const Skills = () => {
   const { offset, setActive } = useContext(NavContext);
   const skillRef = useRef();
 
-  const setScrollNav = () => {
+  const setScrollNav = useCallback(() => {
     let skillsTop = skillRef.current.offsetTop;
     let skillsHeight = skillRef.current.clientHeight;
-
+    console.log({
+      skillsTop,
+      skillsHeight,
+      offset,
+    });
     if (offset > skillsTop && offset <= skillsHeight + skillsTop) {
       setActive("skills");
     } else if (offset > skillsHeight + skillsTop) {
       setActive("portfolio");
     }
-  };
+  }, [setActive, offset]);
 
   useLayoutEffect(() => {
     setScrollNav();
-  }, [offset]);
+  }, [setScrollNav]);
 
   return (
     <div className="skills" id="skills" ref={skillRef}>

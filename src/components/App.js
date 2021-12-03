@@ -1,4 +1,5 @@
 import "../App.scss";
+import { FormspreeProvider } from "@formspree/react";
 import { useEffect } from "react";
 import Radium, { StyleRoot } from "radium";
 import { NavProvider } from "../context/NavContext";
@@ -9,23 +10,25 @@ import Navbar from "./Navbar";
 import Portfolio from "./Portfolio";
 import Skills from "./Skills";
 
-function App() {
+function App({ Component, pageProps }) {
   useEffect(() => {});
   return (
     <StyleRoot>
-      <div className="App">
-        <div className="container">
-          <NavProvider>
-            <Navbar />
-            <Home />
-            <Skills />
-            <Portfolio />
+      <FormspreeProvider project="{your-project-id}">
+        <div className="App">
+          <div className="container">
+            <NavProvider>
+              <Navbar />
+              <Home />
+              <Skills />
+              <Portfolio />
 
-            <Contact />
-            <Footer />
-          </NavProvider>
+              <Contact {...pageProps} />
+              <Footer />
+            </NavProvider>
+          </div>
         </div>
-      </div>
+      </FormspreeProvider>
     </StyleRoot>
   );
 }

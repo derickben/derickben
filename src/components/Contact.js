@@ -1,29 +1,40 @@
-import { useEffect, useRef, useContext, useLayoutEffect } from "react";
+import {
+  useCallback,
+  useRef,
+  useContext,
+  useLayoutEffect,
+  useState,
+} from "react";
 import { NavContext } from "../context/NavContext";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
 const Contact = () => {
+  const [value, setValue] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
   const { offset, setActive } = useContext(NavContext);
   const contactRef = useRef();
 
-  const setScrollNav = () => {
+  const handleChange = (props) => (e) => {
+    setValue({ ...value, [props]: e.target.value });
+  };
+
+  const setScrollNav = useCallback(() => {
     let contactTop = contactRef.current.offsetTop;
     let contactHeight = contactRef.current.clientHeight;
-    console.log({
-      contactTop,
-      contactHeight,
-      offset,
-    });
     if (offset > contactTop && offset <= contactHeight + contactTop) {
       setActive("contact");
     }
-  };
+  }, [offset, setActive]);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     setScrollNav();
-  }, [offset]);
+  }, [setScrollNav]);
   return (
     <div className="contact" id="contact" ref={contactRef}>
       <div className="contact__first">
@@ -42,13 +53,17 @@ const Contact = () => {
           benedictuyioghosa@gmail.com
         </p>
         <p className="contact__socials">
-          <a href="">
+          <a
+            href="https://web.facebook.com/derickbenedictt"
+            target="_blank"
+            rel="noreferrer"
+          >
             <i className="fab fa-facebook fa-2x"></i>
           </a>
-          <a href="">
+          <a href="/" target="_blank" rel="noreferrer">
             <i className="fab fa-instagram fa-2x"></i>
           </a>
-          <a href="">
+          <a href="/" target="_blank" rel="noreferrer">
             <i className="fab fa-twitter fa-2x"></i>
           </a>
         </p>
@@ -56,18 +71,21 @@ const Contact = () => {
 
       <Box
         component="form"
+        action={`https://formspree.io/f/xvodeeql`}
         sx={{
           maxWidth: "90%",
         }}
-        noValidate
         autoComplete="off"
         className="contact__second"
+        method="POST"
       >
         <TextField
           id="name"
           className="contact__second--name"
           required
+          onChange={handleChange("name")}
           label="Name"
+          name="name"
           variant="standard"
           fullWidth={true}
           margin="dense"
@@ -75,27 +93,37 @@ const Contact = () => {
         <TextField
           id="email"
           className="contact__second--email"
+          onChange={handleChange("email")}
           label="Email"
           variant="standard"
+          name="_replyto"
           required
         />
         <TextField
           id="subject"
           className="contact__second--subject"
+          onChange={handleChange("subject")}
           label="Subject"
           variant="standard"
+          name="subject"
           required
         />
         <TextField
           id="message"
           className="contact__second--message"
+          onChange={handleChange("message")}
           required
           label="Message"
           variant="outlined"
+          name="message"
           fullWidth={true}
           margin="dense"
         />
-        <Button variant="contained" className="contact__second--button">
+        <Button
+          variant="contained"
+          className="contact__second--button"
+          type="submit"
+        >
           Submit
         </Button>
       </Box>
