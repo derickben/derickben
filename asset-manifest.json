@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/derickben/static/css/main.0aaec2df.chunk.css",
-    "main.js": "/derickben/static/js/main.2f3bec73.chunk.js",
-    "main.js.map": "/derickben/static/js/main.2f3bec73.chunk.js.map",
+    "main.css": "/derickben/static/css/main.76f43c8e.chunk.css",
+    "main.js": "/derickben/static/js/main.f09a0282.chunk.js",
+    "main.js.map": "/derickben/static/js/main.f09a0282.chunk.js.map",
     "runtime-main.js": "/derickben/static/js/runtime-main.e5cd421e.js",
     "runtime-main.js.map": "/derickben/static/js/runtime-main.e5cd421e.js.map",
     "static/js/2.827d5874.chunk.js": "/derickben/static/js/2.827d5874.chunk.js",
     "static/js/2.827d5874.chunk.js.map": "/derickben/static/js/2.827d5874.chunk.js.map",
     "index.html": "/derickben/index.html",
-    "static/css/main.0aaec2df.chunk.css.map": "/derickben/static/css/main.0aaec2df.chunk.css.map",
+    "static/css/main.76f43c8e.chunk.css.map": "/derickben/static/css/main.76f43c8e.chunk.css.map",
     "static/js/2.827d5874.chunk.js.LICENSE.txt": "/derickben/static/js/2.827d5874.chunk.js.LICENSE.txt",
     "static/media/aws-logo.ed27ba62.svg": "/derickben/static/media/aws-logo.ed27ba62.svg",
     "static/media/bac1.d4583f4e.jpg": "/derickben/static/media/bac1.d4583f4e.jpg",
@@ -37,7 +37,7 @@
   "entrypoints": [
     "static/js/runtime-main.e5cd421e.js",
     "static/js/2.827d5874.chunk.js",
-    "static/css/main.0aaec2df.chunk.css",
-    "static/js/main.2f3bec73.chunk.js"
+    "static/css/main.76f43c8e.chunk.css",
+    "static/js/main.f09a0282.chunk.js"
   ]
 }
