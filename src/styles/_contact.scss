@@ -143,3 +143,18 @@
     grid-template-columns: repeat(auto-fit, minmax(37rem, 50rem));
   }
 }
+
+.css-sghohy-MuiButtonBase-root-MuiButton-root {
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  color: hsl(23, 88%, 25%);
+  font-weight: 700;
+  border-radius: 1rem;
+  background-color: hsl(23, 88%, 75%);
+  box-shadow: none;
+
+  &:hover {
+    background-color: hsl(23, 88%, 25%);
+    color: hsl(23, 88%, 80%);
+  }
+}
